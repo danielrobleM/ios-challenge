@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WeatherViewController.h
 //  Weatherfy
 //
 //  Created by Eduardo Toledo on 12/13/17.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface WeatherViewController : UIViewController
 
 
 @end
