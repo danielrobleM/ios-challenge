@@ -29,9 +29,9 @@ func mean(data: String, in town: String) -> Double
     return 0.0
 }
 
-// Implementar la funcion `variance` que calcule la varianza de lluvia caida en la ciudad `town, dado el string `data`.
+// Implementar la funcion `variance` que calcule la varianza de lluvia caida en la ciudad `town`, dado el string `data`.
 // Se puede encontrar cómo calcular la varianza en el siguiente link
-//http://www.mathsisfun.com/data/standard-deviation.html
+// http://www.mathsisfun.com/data/standard-deviation.html
 func variance(data: String, in town: String) -> Double
 {
     return 0.0
