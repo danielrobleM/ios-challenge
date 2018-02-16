@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2124D1EA2036763000020E86 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2124D1E92036762F00020E86 /* WeatherViewModel.swift */; };
 		7EF81CFF1FE1833300CD199B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF81CFE1FE1833300CD199B /* AppDelegate.m */; };
 		7EF81D021FE1833300CD199B /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF81D011FE1833300CD199B /* WeatherViewController.m */; };
 		7EF81D051FE1833300CD199B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF81D031FE1833300CD199B /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2124D1E92036762F00020E86 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		7EF81CFA1FE1833300CD199B /* Weatherfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weatherfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF81CFD1FE1833300CD199B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7EF81CFE1FE1833300CD199B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				7EF81D0B1FE1833300CD199B /* Info.plist */,
 				7EF81D0C1FE1833300CD199B /* main.m */,
 				7EF81D211FE1853000CD199B /* Weatherfy-Bridging-Header.h */,
+				2124D1E92036762F00020E86 /* WeatherViewModel.swift */,
 			);
 			path = Weatherfy;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2124D1EA2036763000020E86 /* WeatherViewModel.swift in Sources */,
 				7EF81D021FE1833300CD199B /* WeatherViewController.m in Sources */,
 				7EF81D0D1FE1833300CD199B /* main.m in Sources */,
 				7EF81D231FE1853000CD199B /* DataSource.swift in Sources */,
@@ -368,10 +372,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Weatherfy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sosafe.Weatherfy;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:Weatherfy)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Weatherfy/Weatherfy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -386,10 +392,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Weatherfy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sosafe.Weatherfy;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:Weatherfy)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Weatherfy/Weatherfy-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

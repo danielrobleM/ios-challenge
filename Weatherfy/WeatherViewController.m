@@ -7,9 +7,12 @@
 //
 
 #import "WeatherViewController.h"
+#import "Weatherfy-Swift.h"
 @import MapKit;
 
-@interface WeatherViewController ()
+@interface WeatherViewController () {
+	WeatherViewModel *viewModel;
+}
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *averageLabel;
@@ -18,28 +21,26 @@
 
 @implementation WeatherViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+	viewModel = [[WeatherViewModel alloc]init];
 }
 
-- (IBAction)onActionButtonPressed:(UIButton *)sender
-{
+- (IBAction)onActionButtonPressed:(UIButton *)sender {
     [self.textField resignFirstResponder];
     [self updateLabels];
-    [self moveMapToCoordinates:CLLocationCoordinate2DMake(0, 0)];
+	[viewModel findWithCity:self.textField.text completion:^(CLLocation * location) {
+		[self moveMapToCoordinates:location.coordinate];
+	}];
 }
 
-- (void)updateLabels
-{
+- (void)updateLabels {
     self.averageLabel.text = @"-1";
     self.varianceLabel.text = @"-1";
 
 }
 
-- (void)moveMapToCoordinates:(CLLocationCoordinate2D)coordinates
-{
+- (void)moveMapToCoordinates:(CLLocationCoordinate2D)coordinates {
     [self.mapView setCenterCoordinate:coordinates animated:YES];
 }
 
