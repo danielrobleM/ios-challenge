@@ -62,13 +62,13 @@ typealias DataSourceResponse = (mean: Double, variance : Double)
 	func findData(town: String) -> String? {
 		let towns = data.components(separatedBy: sepatator)
 		let town = towns.filter { $0.range(of:town) != nil}
-		return town.first // Rome:Jan 82.2,Feb 63.2,Mar 70.3,Apr 53.7,May 53.0,Jun 34.4,Jul 17.5,Aug 27.5,Sep 60.9,Oct 117.7,Nov 111.0,Dec 97.9
+		return town.first
 	}
 
 	func findFallenRain(in town : String) -> [Double] {
 		let months = town.components(separatedBy: ":")
-		let monthsfiltered = months[1].components(separatedBy: ",") // Jan 82.2,Feb 63.2,Mar 70.3,Apr 53.7,May 53.0,Jun 34.4,Jul 17.5,Aug 27.5,Sep 60.9,Oct 117.7,Nov 111.0,Dec 97.9
-		let fallenRain = monthsfiltered.map { getValue(string: $0)}// [82.2, 63.2, 70.3,..]
+		let monthsfiltered = months[1].components(separatedBy: ",")
+		let fallenRain = monthsfiltered.map { getValue(string: $0)}
 		return fallenRain
 	}
 
