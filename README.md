@@ -1,7 +1,7 @@
 
-# ios Challenge
+# iOS Challenge
 
-App iOS `9.0+`, development on `Xcode Version 9.2 (9C40b)`, write in `swift 4.0`
+App iOS `9.0+`, development on `Xcode Version 9.2 (9C40b)`, write in `swift 4.0` and `Objetive-c`.
 
 ## Dependencies
 
