@@ -11,7 +11,7 @@
 @import MapKit;
 
 @interface WeatherViewController () {
-	WeatherViewModel *viewModel;
+    WeatherViewModel *viewModel;
 }
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -23,21 +23,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	viewModel = [[WeatherViewModel alloc]init];
+    [self updateLabels];
+    viewModel = [[WeatherViewModel alloc]init];
 }
 
 - (IBAction)onActionButtonPressed:(UIButton *)sender {
     [self.textField resignFirstResponder];
-    [self updateLabels];
-	[viewModel findWithCity:self.textField.text completion:^(CLLocation * location) {
-		[self moveMapToCoordinates:location.coordinate];
-	}];
+    [viewModel findWithTown: self.textField.text completion:^(CLLocation * location) {
+        [_averageLabel setText: [viewModel getMean]];
+        [_varianceLabel setText: [viewModel getVariance]];
+        [self moveMapToCoordinates:location.coordinate];
+    }];
 }
 
 - (void)updateLabels {
     self.averageLabel.text = @"-1";
     self.varianceLabel.text = @"-1";
-
 }
 
 - (void)moveMapToCoordinates:(CLLocationCoordinate2D)coordinates {

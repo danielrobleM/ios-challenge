@@ -9,16 +9,34 @@
 import Foundation
 import CoreLocation
 
-@objc class WeatherViewModel: NSObject {
+@objc final class WeatherViewModel: NSObject {
 
-	func find(city: String, completion: @escaping (CLLocation?) -> ()) {
+	final let dataSource = DataSource()
+	var mean:Double = -1
+	var variance:Double = -1
+
+	func find(town: String, completion: @escaping (CLLocation?) -> ()) {
 		let geoCoder = CLGeocoder()
-		geoCoder.geocodeAddressString(city) { (placemarks, error) in
+		calculate(town: town)
+		geoCoder.geocodeAddressString(town) { (placemarks, error) in
 			guard let placemarks = placemarks, let location = placemarks.first?.location else {
 				return completion(nil)
 			}
 			return completion(location)
 		}
 	}
-	
+
+	func calculate(town: String) {
+		let result = dataSource.calculate(in: town)
+		mean = result.mean
+		variance = result.variance
+	}
+
+	func getVariance() -> String {
+		return variance == -1 ? "-1" : String(format:"%.1f", variance)
+	}
+
+	func getMean() -> String {
+		return mean == -1 ? "-1" : String(format:"%.1f", mean)
+	}
 }
