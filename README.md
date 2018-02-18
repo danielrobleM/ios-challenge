@@ -1,4 +1,24 @@
-# README #
+
+# ios Challenge
+
+App iOS `9.0+`, development on `Xcode Version 9.2 (9C40b)`, write in `swift 4.0`
+
+## Dependencies
+
+1. [Xcode](https://developer.apple.com/xcode/)
+
+## How to run the app
+
+1. Clone the repository
+3. Open `Weatherfy.xcodeproj`
+4. Run from Xcode
+
+## Considerations
+
+1. The Data array in `DataSource.swift` is never malformed.
+
+
+### Original Readme
 
 Code challenge para postulantes a desarrollador iOS SoSafe
 
