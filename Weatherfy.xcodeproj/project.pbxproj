@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21025856203B93FC005AB337 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21025855203B93FC005AB337 /* MapKit.framework */; };
 		2124D1EA2036763000020E86 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2124D1E92036762F00020E86 /* WeatherViewModel.swift */; };
 		7EF81CFF1FE1833300CD199B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF81CFE1FE1833300CD199B /* AppDelegate.m */; };
 		7EF81D021FE1833300CD199B /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF81D011FE1833300CD199B /* WeatherViewController.m */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21025855203B93FC005AB337 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2124D1E92036762F00020E86 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		7EF81CFA1FE1833300CD199B /* Weatherfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weatherfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF81CFD1FE1833300CD199B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21025856203B93FC005AB337 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21025854203B93FC005AB337 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21025855203B93FC005AB337 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7EF81CF11FE1833300CD199B = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +84,7 @@
 				7EF81CFC1FE1833300CD199B /* Weatherfy */,
 				7EF81D151FE1833300CD199B /* WeatherfyTests */,
 				7EF81CFB1FE1833300CD199B /* Products */,
+				21025854203B93FC005AB337 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
